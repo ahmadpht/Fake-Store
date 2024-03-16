@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom"
 import axios from "axios"
+import { Link } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+
 import ProductInfoImage from "./ProductInfoImage"
 import ProductInfoDesc from "./ProductInfoDesc"
 import ProductInfoPrice from "./ProductInfoPrice"
@@ -17,7 +18,7 @@ const ProductInfo = () => {
     },[])
         
     return (
-        <div className="min-h-screen flex justify-center items-center w-3/5 p-8 my-6 m-auto rounded-xl border-2 border-blue-900">
+        <div className="flex justify-center items-center w-3/5 p-8 my-6 m-auto rounded-xl border-2 border-blue-900">
             
             <ProductInfoImage img={productInfo?.image} alt={productInfo.title} />
 

@@ -1,5 +1,5 @@
-import { useEffect ,useState} from "react"
-import  Product  from "../Product/Product"
+import { useEffect, useState} from "react"
+import Product from "./Components/Product/Product"
 
 const Home = () => {
 
@@ -23,4 +23,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Home;
