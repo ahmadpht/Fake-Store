@@ -11,9 +11,9 @@ const App = () =>{
 
     const path = location.pathname;
     console.log(path)
-    
+
     return(
-        <div>
+        <>
             {
                 path && path === '/login'
                 ? (<Router>
@@ -32,7 +32,7 @@ const App = () =>{
                     <Footer />                        
                 </Router>)
             }
-        </div>
+        </>
     )
 }
 
