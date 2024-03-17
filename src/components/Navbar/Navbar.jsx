@@ -1,5 +1,5 @@
-import Search from './Search/Search'
-import SignInUp from './SignInUp/SignInUp'
+import Search from '../Search/Search'
+import SignInUp from '../SignInUp/SignInUp'
 
 const Navbar = () => {
     return (
