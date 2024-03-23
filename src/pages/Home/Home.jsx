@@ -1,17 +1,18 @@
 import { useEffect, useState} from "react"
-import Product from "./Components/Product/Product"
+import Product from "../../components/Product/Product"
+import axios from "axios"
 
 const Home = () => {
 
     const [products , setProducts] = useState('')
 
     useEffect(()=> {
-        fetch('https://fakestoreapi.com/products')
-            .then(res=>res.json())
-            .then(res=> setProducts(res))
+        axios.get('https://fakestoreapi.com/products')
+            .then( res => {
+                setProducts(res.data)
+            })
     },[])
 
-    
     return (
         <div className="grid grid-cols-4 gap-8 p-12">
         {

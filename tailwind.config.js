@@ -6,13 +6,11 @@ export default {
   ],
   theme: {
     extend: {
-      fontSize:{
-        '10xl': '1000px',
-        '11xl': '300px'
-      },
-      height: {
-        'product':'min-height calc(100vh - 292px)'
-      }
+      colors: {
+        'primary': '#202872',
+        'secondary': '#8d97eb',
+        'accent': '#515fd7',
+       },
     },
   },
   plugins: [],

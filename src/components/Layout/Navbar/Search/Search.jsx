@@ -4,6 +4,7 @@ const Search = () => {
 
     const [search , setSearch] = useState('')
 
+
   return (
       <form onSubmit={e => e.preventDefault() } className='mr-12 w-1/2 flex justify-end'>
             <input
