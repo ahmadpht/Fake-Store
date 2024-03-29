@@ -1,4 +1,4 @@
-import Search from './Search/Search'
+import Search from '../../Search/Search'
 import RegistrationPage from './RegistrationPage/RegistrationPage'
 
 const Navbar = () => {

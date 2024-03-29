@@ -1,8 +1,11 @@
-import { useEffect, useState} from "react"
+import { useContext, useEffect, useState} from "react"
 import Product from "../../components/Product/Product"
 import axios from "axios"
+import Sidebar from "../../components/Sidebar/Sidebar"
+import { createApp } from "../../App"
 
 const Home = () => {
+    const {search} = useContext(createApp)
 
     const [products , setProducts] = useState('')
 
@@ -14,12 +17,24 @@ const Home = () => {
     },[])
 
     return (
-        <div className="grid grid-cols-4 gap-8 p-12">
-        {
-            products && products.map((data)=>{
-                return <Product data={data} key={data.id}/>
-            })
-        }
+        <div className="max-w[100vw] flex flex-row-reverse">
+                <Sidebar />
+            <div className="w-4/5 grid grid-cols-3 gap-8 p-20">
+            {
+                products && products.filter((data) => {
+                    return search.toLowerCase() === ""
+                    ? data
+                    : data.title.toLowerCase().includes(search)
+                })
+                .map((data)=>{
+                        return <Product data={data} key={data.id}/>
+                })
+
+                // products && products.map((data)=>{
+                //     return <Product data={data} key={data.id}/>
+                // })
+            }
+            </div>
         </div>
     )
 }

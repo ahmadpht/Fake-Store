@@ -11,11 +11,18 @@ import Navbar from "./components/Layout/Navbar/Navbar"
 import ShowNavbar from "./components/ShowLayout/ShowNavbar/ShowNavbar"
 import Footer from "./components/Layout/Footer/Footer"
 import ShowFooter from "./components/ShowLayout/ShowFooter/ShowFooter"
+import { createContext, useState } from "react";
+
+export const createApp = createContext()
 
 const App = () => {
+
+  const [search, setSearch] = useState('');
   
   return (
     <>
+    <createApp.Provider value={{search, setSearch}}>
+
       <Router>
         <ShowNavbar>
           <Navbar/>
@@ -31,6 +38,7 @@ const App = () => {
           <Footer/>
         </ShowFooter>
       </Router>
+    </createApp.Provider>
     </>
   );
 };
