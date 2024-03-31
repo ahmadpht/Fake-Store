@@ -29,10 +29,6 @@ const Home = () => {
                 .map((data)=>{
                         return <Product data={data} key={data.id}/>
                 })
-
-                // products && products.map((data)=>{
-                //     return <Product data={data} key={data.id}/>
-                // })
             }
             </div>
         </div>

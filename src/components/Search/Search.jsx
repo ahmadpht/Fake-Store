@@ -1,23 +1,5 @@
-import axios from 'axios'
-import { useContext, useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useContext } from 'react'
 import { createApp } from '../../App'
-
-// const [searchInput , setSearchInput] = useState('')
-// const [item, setItem] = useState([])
-// useEffect(() => {
-//     axios.get(`https://fakestoreapi.com/products/`)
-//     .then(res => setItem(res.data))
-//     .then(handleAPI(item))
-// },[])
-
-// const handleAPI = (data) => {
-//   item && data.map((product) => (
-//     product.category === searchInput
-//     ?  console.log(product)
-//     : null
-//   ))
-// }
 
 const Search = () => {
 
