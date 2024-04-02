@@ -11,7 +11,7 @@ const Sidebar = () => {
     }
         
     return(
-        <form className="w-96 bg-blue-500 top-2/4 left-2/4 sticky flex flex-col p-10">
+        <form className="w-2/12 bg-blue-500 top-2/4 left-2/4 sticky flex flex-col p-10 my-20 rounded-xl">
             <label htmlFor="price">Price: {inputValues.price}$</label>
             <input type="range" id="price" name="price" min={1} max={500} onChange={handleChanges} value={inputValues.price} />
 

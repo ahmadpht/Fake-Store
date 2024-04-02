@@ -17,9 +17,9 @@ const Home = () => {
     },[])
 
     return (
-        <div className="max-w[100vw] flex flex-row-reverse">
+        <div className="max-w[100vw] flex flex-row-reverse justify-center">
                 <Sidebar />
-            <div className="w-4/5 grid grid-cols-3 gap-8 p-20">
+            <div className="w-8/12 grid grid-cols-3 gap-8 p-20">
             {
                 products && products.filter((data) => {
                     return search.toLowerCase() === ""
