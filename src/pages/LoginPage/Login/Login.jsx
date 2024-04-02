@@ -23,7 +23,7 @@ const Login = () => {
               <Link to='/' className="text-blue-500">Forgat Password?</Link>
             </div>
             <button type="submit" className="w-full mb-4 text[18px] mt-6 rounded-full bg-white text-emerald-800 hover:bg-emerald-600 hover:text-white py-2 transition-colors duration-300">Login</button>
-            <div>
+            <div className="text-center">
                 <span className="m-4">New Here? <Link to='/register' className="text-blue-500">Create an Account</Link></span>
             </div>
           </form>

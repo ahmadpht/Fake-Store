@@ -15,6 +15,7 @@ const ProductInfo = () => {
     useEffect(() => {
         axios.get(`https://fakestoreapi.com/products/${params.id}`)
         .then(res => setProductInfo(res.data))
+        .catch(err => console.error(err))
     },[])
         
     return (

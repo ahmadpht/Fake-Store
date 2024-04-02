@@ -1,9 +1,9 @@
 import { useContext } from 'react'
-import { createApp } from '../../App'
+import { mainContext } from '../../App'
 
 const Search = () => {
 
-  const {search, setSearch} = useContext(createApp);
+  const {search, setSearch} = useContext(mainContext);
   const handleClick = e => {
     setSearch('');
     e.preventDefault();
@@ -13,8 +13,8 @@ const Search = () => {
       <form onSubmit={handleClick} className='mr-12 w-1/2 flex justify-end'>
             <input
               type="text" 
-              // required 
-              placeholder="searchInput..."
+              required 
+              placeholder="search..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className='w-1/2 h-12 px-4 rounded-s-xl b-none outline-none text-2xl'

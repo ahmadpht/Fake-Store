@@ -22,7 +22,7 @@ const Register = () => {
               <i className="fa-solid fa-unlock-keyhole absolute top-1 right-2"></i>
             </div>
             <button type="submit" className="w-full mb-4 text[18px] mt-6 rounded-full bg-white text-emerald-800 hover:bg-emerald-600 hover:text-white py-2 transition-colors duration-300">Register</button>
-            <div>
+            <div className="text-center">
                 <span className="m-4">Already Create an Account ?<Link to='/login' className="text-blue-500"> Login</Link></span>
             </div>
           </form>
