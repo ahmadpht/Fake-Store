@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom"
 import ProductInfoImage from "./ProductInfoImage"
 import ProductInfoDesc from "./ProductInfoDesc"
 import ProductInfoPrice from "./ProductInfoPrice"
+import Suggestion from "../Suggestion/Suggestion"
 
 const ProductInfo = () => {
 
@@ -19,11 +20,11 @@ const ProductInfo = () => {
     },[])
         
     return (
-        <div className="flex justify-center items-center w-3/5 p-8 my-6 m-auto rounded-xl border-2 border-blue-900">
+        <div className="flex justify-center items-center w-3/5 p-8 my-6 m-auto rounded-xl">
             
             <ProductInfoImage img={productInfo?.image} alt={productInfo.title} />
 
-            <div className="px-8 mt-24 flex flex-col justify-between mb-12">
+            <div className="px-8 flex flex-col justify-between mb-12 border-2 border-blue-900">
                 <ProductInfoDesc info={productInfo} />
                 <ProductInfoPrice info={productInfo} />
                 <div className="flex items-center justify-center">
@@ -32,6 +33,9 @@ const ProductInfo = () => {
                     </Link>
                 </div>
             </div>
+                <div className="suggestion">
+                    <Suggestion product={productInfo.category} />
+                </div>
         </div>
     )
 }
