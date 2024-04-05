@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 import { mainContext } from '../../App'
 
+
 const Search = () => {
 
   const {search, setSearch} = useContext(mainContext);

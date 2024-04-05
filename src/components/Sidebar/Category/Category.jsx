@@ -1,38 +1,29 @@
-import { useState } from "react"
+import { useContext } from "react"
+import { mainContext } from "../../../App"
 
 const Category = () => {
 
-    const [categories, setCategories] = useState('all');
-    const handleChanges = () => {
-
-    }
+    const {categories, setCategories} = useContext(mainContext) 
     
   return (
-    <>
-        <h2>Category</h2>
-        <div className="flex flex-col">
-            <label>
-                <input type="radio" name="value" value="all" onClick={e => setCategories(e.target.value)} />
-                <span>All</span>
-            </label>
-            <label>
-                <input type="radio" name="value" value="women's clothing" onClick={e => setCategories(e.target.value)} />
-                <span>Women`s Clothing</span>
-            </label>
-            <label>
-                <input type="radio" name="value" value="Men's Clothing" onClick={e => setCategories(e.target.value)} />
-                <span>Men`s Clothing</span>
-            </label>
-            <label>
-                <input type="radio" name="value" value="jewelery" onClick={e => setCategories(e.target.value)} />
-                <span>Jewelery</span>
-            </label>
-            <label>
-                <input type="radio" name="value" value="electronic" onClick={e => setCategories(e.target.value)} />
-                <span>Electronics</span>
-            </label>
-        </div>
-    </>
+
+    <form className="flex flex-col" name="category" id="category" onChange={e => setCategories(e.target.value)} value={categories}>
+    <label>All
+        <input name="value" type="radio" value=''/>
+    </label>
+    <label>Women`s Clothing
+        <input name="value" type="radio"value="women's clothing"/>
+    </label>
+    <label>Men`s Clothing
+        <input name="value" type="radio" value="men's clothing"/>
+    </label>
+    <label>Jewelery
+        <input name="value" type="radio" value="jewelery"/>
+    </label>
+    <label>Electronics
+        <input name="value" type="radio" value="electronics"/>
+    </label>
+</form>
   )
 }
 

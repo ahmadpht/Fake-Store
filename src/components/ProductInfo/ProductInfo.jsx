@@ -27,8 +27,8 @@ const ProductInfo = () => {
                 <ProductInfoDesc info={productInfo} />
                 <ProductInfoPrice info={productInfo} />
                 <div className="flex items-center justify-center">
-                    <Link to={'/'}>
-                        <button className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-red-500 hover:to-yellow-400 px-16 py-4 rounded-xl text-2xl text-white active:scale-95">Back</button>
+                    <Link to={'/card'}>
+                        <button className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-red-500 hover:to-yellow-400 px-16 py-4 rounded-xl text-2xl text-white active:scale-95">Buy</button>
                     </Link>
                 </div>
             </div>
