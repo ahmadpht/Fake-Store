@@ -1,28 +1,28 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import SuggestImg from "../SuggestImg/SuggestImg";
 
-const Suggestion = (product) => {
+const Suggestion = ({product}) => {
     const [data, setData] = useState('');
     useEffect(() =>{
-        axios.get(`https://fakestoreapi.com/products/category/men's clothing`)
+        axios.get(`https://fakestoreapi.com/products/category/${product.category}`)
         .then(res => setData(res.data))
         .catch(err => console.log(err))
-},[])
+    },[])
     return (
-        data && data.filter(item => {
-            return item.id === product.id
-            ? item
-            : item
-        })
+        <div>
+            {
+                data && data?.map(item => {
+                return (
+                    item.id !== product.id
+                    ? <SuggestImg img={item?.image} />
+                    : ''
+                )
 
-        .map(item => {
-            return (
-                <Link to={`${item.id}`} key={item.id}>
-                    <img src={item.image} />
-                </Link>
-            )
-        })
+            })}
+        </div>
+        
     )
 }
 
