@@ -18,7 +18,6 @@ const ProductInfo = () => {
         .then(res => setProductInfo(res.data))
         .catch(err => console.error(err))
     },[])
-        
     return (
         <div className="flex justify-center items-center w-3/5 p-8 my-6 m-auto rounded-xl">
             
@@ -34,7 +33,7 @@ const ProductInfo = () => {
                 </div>
             </div>
                 <div className="suggestion">
-                    <Suggestion product={productInfo.category} />
+                    <Suggestion product={productInfo} />
                 </div>
         </div>
     )
