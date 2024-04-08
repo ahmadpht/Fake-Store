@@ -7,11 +7,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        'primary': '#202872',
-        'secondary': '#8d97eb',
-        'accent': '#515fd7',
+        'primary': '#071952',
+        'secondary': '#F5F5F5',
+        'third': '#80B3FF',
+        'fourth': '#97FEED',
+        'five': '#537FE7'
        },
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar-hide')],
 }

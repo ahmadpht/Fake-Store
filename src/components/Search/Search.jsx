@@ -21,7 +21,7 @@ const Search = () => {
               className='w-1/2 h-12 px-4 rounded-s-xl b-none outline-none text-2xl'
               />
             <button
-              className='w-1/12 bg-blue-200 h-full text-2xl rounded-e-xl text-cyan-800'
+              className='w-1/12 bg-third h-full text-2xl rounded-e-xl text-cyan-800'
               onClick={handleClick}>
               <i className=" fa-solid fa-magnifying-glass"></i>
               </button>

@@ -16,7 +16,7 @@ const Home = () => {
     },[])
 
     return (
-        <div className="max-w[100vw] flex flex-row-reverse justify-center">
+        <div className="max-w[100vw] h[100vh] flex flex-row-reverse justify-center ">
                 <Sidebar />
             <div className="w-8/12 grid grid-cols-3 gap-8 p-20">
             {
