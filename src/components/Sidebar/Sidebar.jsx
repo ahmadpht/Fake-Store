@@ -1,18 +1,14 @@
-import { useContext } from "react";
-import { mainContext } from "../../App";
 import Category from "./Category/Category";
+import PriceRange from "./PriceRange/PriceRange";
 
 const Sidebar = () => {
-
-    const {price ,setPrice} = useContext(mainContext)
-        
-    return(
-        <div className="w-96 top-2/4 left-2/4 sticky flex flex-col p-10 my-20 rounded-lg bg-third">
-            <label htmlFor="price">Price:</label>
-            <input type="number" id="price" name="price" min={1} max={1000} onChange={e => setPrice(e.target.value)} value={price} />
-            <Category />
-        </div>
-    )
-}
+ 
+  return (
+    <div className="w-[27vw] hidden xl:flex flex-col px-10 pb-20 my-20 border-l border-gray-200 dark:border-gray-700">
+      <Category />
+      <PriceRange />
+    </div>
+  );
+};
 
 export default Sidebar;
