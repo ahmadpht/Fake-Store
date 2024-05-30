@@ -25,7 +25,7 @@ const App = () => {
     setLoader(true);
     setTimeout(() => {
       setLoader(false);
-    }, 100);
+    }, 1000);
   }, []);
 
   return loader ? (
